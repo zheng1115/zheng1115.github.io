@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>云润红魂·美愈童心</title>
+    <style>
+        /* 全局初始化 清除默认边距 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", "Microsoft Yahei", sans-serif;
+        }
+        /* 页面暖黄田园背景 完美还原原图底色 */
+        body {
+            background-color: #fff9e6;
+            background-image: linear-gradient(to bottom, #fff3cc 0%, #fff9e6 100%);
+            margin: 0;
+            padding: 0;
+        }
+        /* 顶部标题区域 */
+        header {
+            width: 100%;
+            height: 160px;
+            background-color: #fff3cc;
+            border-bottom: 3px solid #ffd88e;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 60px;
+        }
+        /* 居中大标题 */
+        h1 {
+			text-align: center;
+            font-size: 40px;
+            font-weight: bold;
+            color: #2d7033;
+			margin:0 auto;
+        }
+        /* 导航栏样式 */
+        nav {
+            width: 100%;
+            height: 48px;
+            background-color: #fff0c8;
+            border-bottom: 2px solid #ffd37f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+        }
+        .nav-item {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 18px 18px 0 0;
+            transition: all 0.3s;
+        }
+        /* 首页激活高亮橙色 */
+        .nav-item.active {
+            background-color: #ffb84d;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .nav-item:hover {
+            background-color: #ffe2a8;
+        }
+        /* 主体布局：左侧边+中间内容+右侧边 */
+        .container {
+            width: 1200px;
+            margin: 30px auto;
+			display: flex;
+			justify-content: space-between;
+        }
+        /* 左侧卡通侧边栏 */
+        .side-left {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+			align-items: center;
+        }
+        /* 右侧卡通侧边栏 */
+        .side-right {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+        }
+        .side-img {
+            width: 85px;
+            height: auto;
+            display: block; /* 强制图片正常渲染 */
+        }
+        /* 中间内容双栏布局 */
+        .main-box {
+            width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 5px;
+        }
+        /* 内容白色卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 10px;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            font-size: 17px;
+            color: #2d7033;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px dotted #ffd88e;
+        }
+		.card img {
+		    width: 100%;
+		    border-radius: 8px;
+		    margin-bottom: 12px;
+		    display: block;
+		}
+        .card p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #444;
+            margin: 8px 0;
+        }
+        /* 绘画作者信息框 */
+        .painter-info {
+            background-color: #f7fff3;
+            padding: 10px;
+            border-radius: 6px;
+            margin: 12px 0;
+            font-size: 13px;
+        }
+        /* 底部页脚 */
+        footer {
+            width: 100%;
+            height: 50px;
+            background-color: #fff0c8;
+            border-top: 2px solid #ffd37f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2d7033;
+            font-size: 13px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>   
+        <h1 class="site-title">云润红魂·美愈童心</h1>
+    </header>
+
+    <!-- 导航栏 全部空链接# -->
+    <nav>
+        <a href=" " class="nav-item active">首页</a >
+        <a href="#" class="nav-item">留守儿童现状</a >
+        <a href="#" class="nav-item">儿童心理科普</a >
+        <a href="#" class="nav-item">小游戏和小测试专栏</a >
+        <a href="#" class="nav-item">儿童绘画展示</a >
+        <a href="#" class="nav-item">联系我们</a >
+        <a href="#" class="nav-item">关于我们</a >
+    </nav>
+
+    <div class="container">
+        <!-- 【左侧边栏素材】 -->
+        <div class="side-left">
+		<img src="2.jpg" alt="左侧卡通人物" class="side-left">
+        </div>
+
+        <!-- 中间内容主体 -->
+        <div class="main-box">
+            <div class="card">
+                <h3>实地调查 & 暖心陪伴</h3>
+                <img src="5.jpg" alt="志愿者与乡村儿童互动实拍">
+                <p><strong>留守儿童故事：小宇的等待</strong></p >
+                <p>小宇今年8岁，家住云南偏远山区，父母常年在外务工，平日里只有爷爷奶奶陪伴在身边。小小的他早早学会了独立生活，放学回家要帮忙做家务、喂家禽，最大的心愿就是等到春节，能和爸爸妈妈见面。</p >
+                <p>在志愿走访中我们发现，很多山区留守儿童都和小宇一样，长期缺少父母的情感陪伴，内心敏感内向，渴望被关爱、被倾听。我们长期开展下乡陪伴、课业辅导、心理疏导公益活动，用陪伴填补孩子成长里的空缺。</p >
+            </div>
+
+            <div class="card">
+                <h3>儿童绘画展示：我心中的温暖小家</h3>
+                <img src="4.jpg" alt="留守儿童绘画作品">
+                <div class="painter-info">
+                    <p><strong>小作者：</strong>小雅，9岁，云南山区留守儿童</p >
+                    <p><strong>创作时间：</strong>2026年春季公益绘画课</p >
+                </div>
+                <p><strong>画作解读：</strong>在我的画里，大大的胡萝卜是温暖的小房子，可爱的小兔子坐着铅笔小车，牵着软软的气球来做客。暖暖的太阳、飘悠悠的云朵，草地上长满了甜甜的小胡萝卜，这里是永远快乐、无忧无虑的童话小家园。</p >
+            </div>
+
+            <div class="card">
+                <h3>儿童心理科普：留守儿童的情感需求</h3>
+				<img src="6.jpg" alt="乡村儿童实拍">
+                <p>长期亲子分离的成长环境，容易让留守儿童出现安全感缺失、内向自卑、情感孤独、情绪敏感等心理问题。孩子成长过程中，陪伴、认可、倾听，远比物质给予更加重要。</p >
+                <p>本专栏持续科普儿童心理健康知识、情绪疏导小方法、亲子沟通技巧，同时面向大众科普留守儿童群体现状，呼吁社会更多善意与关注，守护乡村孩子的心理健康成长。</p >
+            </div>
+
+            <div class="card">
+                <h3>公益守护行动</h3>
+                <img src="5.jpg" alt="志愿者与乡村儿童互动实拍">
+                <p>我们长期开展山区公益支教、课业帮扶、户外趣味课堂、心理陪伴活动，为乡村留守儿童带去知识、快乐与温暖。后续专栏还会上线趣味益智小游戏、心理小测试、情绪解压小课堂，用轻松的方式陪伴孩子成长。</p >
+                <p>如果你想了解更多帮扶方式、公益捐赠渠道、志愿报名信息，可以前往「联系我们」栏目查看详情。</p >
+            </div>
+        </div>
+
+        <!-- 【右侧边栏素材】 -->
+        <div class="side-right">
+		<img src="1.jpg" alt="左侧卡通人物" class="side-right">
+        </div>
+    </div>
+
+    <footer>
+        云润红魂·美愈童心 © 2026 云润红魂·美愈童心 版权所有
+    </footer>
+</body>
+</html>
